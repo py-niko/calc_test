@@ -1,0 +1,13 @@
+.mainMenu__lists {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    border: solid 2px rgb(223,240,250);
+    border-radius: 5px;
+    width: 100%;
+}  

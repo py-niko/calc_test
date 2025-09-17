@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+    <head>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(96519990, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/96519990" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+        <meta http-equiv="Pragma" content="no-cache"/>
+        <meta http-equiv="Expires" content="0"/>
+        <title>Единое окно расчёта</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body class="body">
+        <header class="header">
+            <h1 class="header__title">Единое окно расчёта</h1>
+            <p class="header__text">Потребительские кредиты</p>
+            <div class="menu">
+                <ul class="menu__lists">
+                    <li class="menu__list">
+                        <a href="index.html" class="menu__link">Вернуться в меню</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main">
+            <section class="paraments">
+                <form class="paramentsForm">
+                    <h2 class="paramentsForm__title">Категории</h2>
+                    <select id="selectorOne" class="paramentsForm__size paramentsForm__ipoteka">
+                    </select>
+                    <h2 class="paramentsForm__title">Классификация категории</h2>
+                    <select id="selectorSecond" class="paramentsForm__size paramentsForm__product">
+                    </select>
+                    <h2 class="paramentsForm__title">Программа</h2>
+                    <select id="selectorThree" class="paramentsForm__size paramentsForm__credit">
+                    </select>
+                    <span id="error-groupCredit" class="paramentsForm__input-error"></span>
+                    <h2 class="paramentsForm__title">Сумма кредита, руб.</h2>
+                    <input class="paramentsForm__sale paramentsForm__sum_razryd" id="razrydSum" type="text"required>
+                    <span id="error-costCredit" class="paramentsForm__input-error razrydSum-error"></span>
+                    <h2 class="paramentsForm__title">Срок кредита, мес.</h2>
+                    <input class="paramentsForm__time" type="number" id="paramentsTime" required>
+                    <span id="error-time" class="paramentsForm__input-error"></span>
+                    <button class="paramentsForm__btn paramentsForm__btnResult" id="result">Расчёт</button>
+                    <button class="paramentsForm__btn" id="exportExcel">Экспортировать в Excel</button>
+                </form>
+            </section>
+            <section class="stavki">
+                <form class="paramentsStavok">
+                    <h2 class="paramentsStavok__title">Понижающие ставку параметры</h2>
+                    <div class="paramentsStavok__container">
+                        <label for="zarplata" class="paramentsStavok__stavka">Электронная подача заявки</label>
+                        <div class="paramentsStavok__containerAdd">
+                            <button class="paramentsStavok__btn paramentsStavok__btn_addStrahovka">Добавить</button>
+                            <input class="paramentsStavok__vibor" type="text" id="noStrahovkaSt" min = 0 value="0" readonly>
+                            <button class="paramentsStavok__btn paramentsStavok__btn_deleteStrahovka">Удалить</button>
+                        </div>
+                    <!--  Новое добавил -->
+                    </div> 
+                        <div class="paramentsStavok__container">
+                        <label for="zarplata" class="paramentsStavok__stavka">Наличие поручителя/созаемщика/залога</label>
+                        <div class="paramentsStavok__containerAdd">
+                            <button class="paramentsStavok__btn paramentsStavok__btn_addStrahovka">Добавить</button>
+                            <input class="paramentsStavok__vibor" type="text" id="procentGarantST" min = 0 value="0" readonly>
+                            <button class="paramentsStavok__btn paramentsStavok__btn_deleteStrahovka">Удалить</button>
+                        </div>                        
+                    </div>
+                    <!--  Новое добавил -->
+                    <div class="paramentsStavok__container">
+                        <label for="KI" class="paramentsStavok__stavka">Сумма имеющейся ссудной задолженности по кредитам в АО "БАНК ОРЕНБУРГ" (кроме обеспечительных кредитов заемщика в Банке - при наличии)</label>
+                        <input type="checkbox" class="paramentsStavok__dopCredit" id="dopCredit">
+                        <div class="paramentsStavok__containerAdd">
+                            <input class="" type="text" id="razrydSale" value="0" disabled>
+                        </div>
+                    </div>
+                </form>
+                <p class="stavki__text">Расчёт не является публичной офертой и носит консультативный характер.</p>
+                <p class="stavki__text">Финальное решение по параметрам заявки формируется в результате согласования с экспертными службами Банка</p>                              
+            </section>
+            <section class="result">
+                <h3 class="result__otv" id="monthPayment">Ежемесячный платёж: </h3>
+                <h3 class="result__otv" id="pereplata">Переплата: </h3>
+                <h3 class="result__otv" id="resultStavka">Ставка: </h3>
+                <h3 class="result__otv" id="resultProduct">Категория: </h3>
+                <h3 class="result__otv" id="resultProgramma">Классификатор категории: </h3>
+                <h3 class="result__otv" id="resultProgram">Программа: </h3>
+
+            </section>
+            <section class="grafikPay">
+                <table class="grafikPay__tablePayment" id="paymentScheduleTable">                   
+                </table>
+            </section>
+        </main>
+        <footer></footer>
+        </body>
+        <script type="text/javascript" src="table2excel.js"></script>
+        <script type="module" src="indexCredit.js" ></script>
+</html>

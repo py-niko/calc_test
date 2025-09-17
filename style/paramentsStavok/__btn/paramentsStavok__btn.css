@@ -1,0 +1,17 @@
+.paramentsStavok__btn {
+    background-color: rgb(223,240,250);
+    border-radius: 10px;
+    border: none;
+    min-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.paramentsStavok__btn:hover {
+    overflow: hidden;
+    opacity: 0.7;
+}
+
+.paramentsForm__btnVklad {
+    width: 332px;
+}

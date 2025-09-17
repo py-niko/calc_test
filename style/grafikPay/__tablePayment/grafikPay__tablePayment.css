@@ -1,0 +1,34 @@
+.grafikPay__tablePayment {
+    border: solid 1px rgb(223,240,250);
+    border-radius: 7px;
+    margin: 0;
+    padding: 0;
+    border-collapse: separate;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .grafikPay__tablePayment caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  .grafikPay__tablePayment tr {
+    background-color: #f8f8f8;
+    border: 1px solid rgb(223,240,250);
+    padding: .35em;
+  }
+  
+  .grafikPay__tablePayment th,
+  .grafikPay__tablePayment td {
+    padding: .625em;
+    text-align: center;
+    border-right: 1px solid rgb(223,240,250);
+    border-bottom: 1px solid rgb(223,240,250);
+  }
+  
+  .grafikPay__tablePayment th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }

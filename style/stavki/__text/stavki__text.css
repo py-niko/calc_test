@@ -1,0 +1,9 @@
+.stavki__text {
+    margin: 0;
+    padding: 0;
+    max-width: 450px;
+    margin-top: 10px;
+    font-size: 10px;
+    color: gray;
+    margin-left: 15px;
+}

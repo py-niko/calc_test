@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+    <head>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(96519990, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/96519990" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+        <meta http-equiv="Pragma" content="no-cache"/>
+        <meta http-equiv="Expires" content="0"/>
+        <title>Единое окно расчёта</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body class="body">
+        <header class="header">
+            <h1 class="header__title">Единое окно расчёта</h1>
+            <p class="header__text">Вклады</p>
+            <div class="menu">
+                <ul class="menu__lists">
+                    <li class="menu__list">
+                        <a href="index.html" class="menu__link">Вернуться в меню</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main main__vklad">
+            <section class="stavki stavki__vklad">
+                <form class="paramentsStavok">
+                    <h2 class="paramentsForm__title">Сумма вклада, руб.</h2>
+                    <input class="paramentsForm__sale paramentsForm__vklad paramentsForm__sum_razryd" id="razrydSum" type="text" placeholder="0" required>
+                    <span id="error-costCredit" class="paramentsForm__input-error razrydSum-error"></span>
+                    <select id="selectorSecond" class="paramentsForm__size paramentsForm__ipoteka">
+                    </select>
+                    <div class="paramentsStavok__periods">
+                        <p class="paramentsStavok__lable">Начало периода</p>
+                        <p class="paramentsStavok__lable">Конец периода</p>
+                        <p class="paramentsStavok__lable">Процент</p>
+                        <p class="paramentsStavok__lable paramentsStavok__lable_margin">Доходность</p>
+                        <input class="paramentsStavok__period" type="text" id="periodOneMin" min = 0 value="0" readonly>
+                        <input class="paramentsStavok__period" type="text" id="priodOneMax" min = 0 value="0" readonly>
+                        <input class="paramentsStavok__period" type="text" id="procentOne" min = 0 value="0" readonly>
+                        <h2 class="paramentsStavok__text" id="sumOne">=</h2>
+                    </div>
+                    <div class="paramentsStavok__periods">
+                        <input class="paramentsStavok__period" type="text" id="periodTwoMin" min = 0 value="0" readonly>
+                        <input class="paramentsStavok__period" type="text" id="priodTwoMax" min = 0 value="0" readonly>
+                        <input class="paramentsStavok__period" type="text" id="procentTwo" min = 0 value="0" readonly>
+                        <h2 class="paramentsStavok__text" id="sumTwo">=</h2>
+                    </div>
+                    <div class="paramentsStavok__periods">
+                        <input class="paramentsStavok__period" type="text" id="periodThreeMin" min = 0 value="0" readonly>
+                        <input class="paramentsStavok__period" type="text" id="priodThreeMax" min = 0 value="0" readonly>
+                        <input class="paramentsStavok__period" type="text" id="procentThree" min = 0 value="0" readonly>
+                        <h2 class="paramentsStavok__text" id="sumThree">=</h2>
+                    </div>
+                    <div class="paramentsStavok__periods">
+                        <input class="paramentsStavok__period" type="text" id="periodFourMin" min = 0 value="0" readonly>
+                        <input class="paramentsStavok__period" type="text" id="priodFourMax" min = 0 value="0" readonly>
+                        <input class="paramentsStavok__period" type="text" id="procentFour" min = 0 value="0" readonly>
+                        <h2 class="paramentsStavok__text" id="sumFour">=</h2>
+                    </div>
+                    <h2 class="paramentsStavok__text" id="sumFive">Доходность итого (весь срок вклада) = </h2>
+                    <button class="paramentsForm__btn paramentsForm__btnResult paramentsForm__btnVklad" id="raschet">Рассчитать</button>
+                </form>
+                <p class="stavki__text">Расчёт не является публичной офертой и носит консультативный характер.</p>
+                <p class="stavki__text">Финальное решение по параметрам заявки формируется в результате согласования с экспертными службами Банка</p>                              
+            </section>
+            <section class="paraments paraments__vklad">
+                <form class="paramentsForm">
+                    <h2 class="paramentsStavok__title">Подбор вклада</h2>
+                    <p class="paramentsStavok__text">Сперва необходимо указать сумму вклада</p>
+                    <div class="paramentsStavok__container">
+                        <h3 class="paramentsStavok__title paramentsStavok__size" id="infoVklad"></h3>        
+                    </div>
+                    <h2 class="paramentsForm__title">Срок вклада, в днях</h2>
+                    <select id="selectorOne" class="paramentsForm__size paramentsForm__ipoteka">
+                    </select>
+                    <h2 class="paramentsForm__title">Наличие капитализации</h2>
+                    <select id="selectorThree" class="paramentsForm__size paramentsForm__ipoteka">
+                        <option>Да</option>
+                        <option>Нет</option>
+                    </select>
+                    <h2 class="paramentsForm__title">Возможность пополнения вклада</h2>
+                    <select id="selectorFour" class="paramentsForm__size paramentsForm__ipoteka">
+                        <option>Да</option>
+                        <option>Нет</option>
+                    </select>
+                    <button class="paramentsForm__btn paramentsForm__btnResult" id="result">Подобрать</button>
+                </form>
+            </section>
+            
+        </main>
+        <footer></footer>
+          <script type="module" src="indexVklad.js"></script>
+        </body>
+</html>

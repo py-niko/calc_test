@@ -1,0 +1,7 @@
+.paramentsStavok__periods {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 332px;
+    margin-top: 10px;
+}

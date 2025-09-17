@@ -1,0 +1,13 @@
+.paraments {
+    display: flex;
+    align-items: flex-start;
+    border: solid 2px rgb(223,240,250);
+    border-radius: 7px;
+    grid-area: 1 / 1 / 2 / 2;
+    max-width: 100%;
+    min-height: 100%;
+}
+
+.paraments__vklad {
+    grid-area: 1 / 2 / 2 / 3;
+}

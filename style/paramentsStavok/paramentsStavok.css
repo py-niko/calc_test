@@ -1,0 +1,10 @@
+.paramentsStavok {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 530px;
+    margin: 10px;
+    /*margin-bottom: 122px;*/
+}

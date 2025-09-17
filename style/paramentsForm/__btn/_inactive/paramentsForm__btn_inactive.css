@@ -1,0 +1,9 @@
+.paramentsForm__btn_inactive {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  .paramentsForm__btn_inactiveBtn {
+    opacity: 0.2;
+    pointer-events: none;
+  }

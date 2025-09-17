@@ -1,0 +1,12 @@
+.mainMenu__link {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 176, 240);
+    font-size: 20px;
+    text-decoration: none;
+    width: 415px;
+    height: 100%;
+    align-items: center;
+    margin-left: 5px;
+}

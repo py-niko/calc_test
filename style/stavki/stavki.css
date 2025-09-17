@@ -1,0 +1,14 @@
+.stavki {
+    display: flex;
+    border: solid 2px rgb(223,240,250);
+    border-radius: 7px;
+    grid-area: 1 / 2 / 2 / 3;
+    min-height: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.stavki__vklad {
+    grid-area: 1 / 1 / 2 / 2;
+}

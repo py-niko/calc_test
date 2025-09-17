@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+    <head>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(96519990, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/96519990" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+        <meta http-equiv="Pragma" content="no-cache"/>
+        <meta http-equiv="Expires" content="0"/>
+        <title>Единое окно расчёта</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body class="body">
+        <header class="header">
+            <h1 class="header__title">Единое окно расчёта</h1>
+            <p class="header__text">Продукты с государственной поддержкой</p>
+            <div class="menu">
+                <ul class="menu__lists">
+                    <li class="menu__list">
+                        <a href="indexIpoteka.html" class="menu__link">Коммерческие продукты</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="indexSoc.html" class="menu__link">Специальные льготные продукты</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="index.html" class="menu__link">Вернуться в меню</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main class="main">
+            <section class="paraments">
+                <form class="paramentsForm">
+                    <h2 class="paramentsForm__title">Цель программы</h2>
+                    <select id="selectorOne" class="paramentsForm__size paramentsForm__ipoteka">
+                    </select>
+                    <h2 class="paramentsForm__title">Кредитный продукт</h2>
+                    <select id="selectorSecond" class="paramentsForm__size paramentsForm__product">
+                    </select>
+                    <h2 class="paramentsForm__title">Сумма кредита, руб.</h2>
+                    <input class="paramentsForm__sum paramentsForm__sum_razryd" id="razrydSum" type="text" required>
+                    <span id="error-sumCredit" class="paramentsForm__input-error razrydSum-error"></span>
+                    <h2 class="paramentsForm__title">Стоимость недвижимости, руб.</h2>
+                    <input class="paramentsForm__sale paramentsForm__sum_razryd" id="razrydSale" type="text" required>
+                    <span id="error-costCredit" class="paramentsForm__input-error razrydSale-error"></span>
+                    <h2 class="paramentsForm__title">Срок кредита, лет</h2>
+                    <input class="paramentsForm__time paramentsForm__time_age" type="number" id="paramentsTime" required>
+                    <span id="error-time" class="paramentsForm__input-error paramentsTime-error"></span>
+                    <h2 class="paramentsForm__title">Локация объекта (группа)</h2>
+                    <select class="paramentsForm__group paramentsForm__sum_group" id="paramentsGroup" required>
+                    </select>
+                    <span id="error-groupCredit" class="paramentsForm__input-error"></span>
+                    <button class="paramentsForm__btn paramentsForm__btnResult" id="result">Расчёт</button>
+                    <button class="paramentsForm__btn" id="exportExcel">Экспортировать в Excel</button>
+                    <button class="paramentsForm__btn" id="openPopup">Расшифровка локации групп</button>
+                </form>
+            </section>
+            <section class="stavki">
+                <form class="paramentsStavok paramentsStavok_bottom">
+                    <h2 class="paramentsStavok__title">Понижающие ставку параметры</h2>
+                    <div class="paramentsStavok__container">
+                        <label for="e-mail" class="paramentsStavok__stavka">Электронная регистрация</label>
+                        <div class="paramentsStavok__containerAdd">
+                            <button class="paramentsStavok__btn paramentsStavok__btn_addElectrons">Добавить</button>
+                            <input class="paramentsStavok__vibor" type="text" id="electronSt" value="0" readonly>
+                            <button class="paramentsStavok__btn paramentsStavok__btn_deleteElectrons">Удалить</button>
+                        </div>
+                    </div>
+                    <h2 class="paramentsStavok__title">Повышающие ставку параметры</h2>
+                    <div class="paramentsStavok__container">
+                        <label for="strahovka" class="paramentsStavok__stavka">Отказ от личного страхования</label>
+                        <div class="paramentsStavok__containerAdd">
+                            <button class="paramentsStavok__btn paramentsStavok__btn_addStrahovka">Добавить</button>
+                            <input class="paramentsStavok__vibor" type="text" id="noStrahovkaSt" min = 0 value="0" readonly>
+                            <button class="paramentsStavok__btn paramentsStavok__btn_deleteStrahovka">Удалить</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="stavki__text">Расчёт не является публичной офертой и носит консультативный характер.</p>
+                <p class="stavki__text">Финальное решение по параметрам заявки формируется в результате согласования с экспертными службами Банка</p>
+            </section>
+            <section class="result">
+                <h3 class="result__otv" id="monthPayment">Ежемесячный платёж: </h3>
+                <h3 class="result__otv" id="pereplata">Переплата: </h3>
+                <h3 class="result__otv" id="resultStavka">Ставка: </h3>
+                <h3 class="result__otv" id="resultProduct">Цель программы: </h3>
+                <h3 class="result__otv" id="resultProgramma">Программа кредитования: </h3>
+                <h3 class="result__otv" id="resultKZ">К/З = </h3>
+            </section>
+            <section class="grafikPay">
+                <table class="grafikPay__tablePayment" id="paymentScheduleTable">
+                </table>
+            </section>
+        </main>
+        <footer></footer>
+        <section class="popup" id="popupId">
+            <div class="popup__container">
+              <ul class="popup__lists">
+                <li class="popup__list">
+                    <p class="popup__text">1-группа: г.Оренбург и Оренбургский район</p>
+                </li>
+                <li class="popup__list">
+                    <p class="popup__text">2-группа: г.Орск, г.Новотроицк, г.Бузулук, г.Гай, г.Медногорск, г.Ясный, г.Соль-Илецк, г.Сорочинск,г.Абдулино, г.Кувандык</p>
+                </li>
+                <li class="popup__list">
+                    <p class="popup__text">3-группа: Населённые пункты, являющиеся районными центрами, не отнесенные к 2 группе</p>
+                </li>
+                <li class="popup__list">
+                    <p class="popup__text">4-группа: Сельские населённые пункты не относенные к 1,2,3 группе</p>
+                </li>
+                <li class="popup__list">
+                    <p class="popup__text">5-группа: г.Самара, г.Казань, г.Екатеринбург, г.Челябинск</p>
+                </li>
+                <li class="popup__list">
+                    <p class="popup__text">6-группа: г.Тольятии, г.Набережные челны, г.Альметьевск, г.Магнитогорск, г.Бугульма</p>
+                </li>
+                <li class="popup__list">
+                    <p class="popup__text">7-группа: г.Москва, г.Санкт-Петербург</p>
+                </li>
+                <li class="popup__list">
+                    <p class="popup__text">8-группа: Московская область: г.Башашиха, г.Подольск, г.Химки,г.Мытищи, г.Люберцы, г.Электросталь, г.Красногорск, г.Коломна,г.Одинцово, г.Серпухов, г.Щёлково, г.Орехово-Зуево, г.Домодедово,г.Раменское, г.Жуковский, г.Пушкино, г.Сергиев Посад, г.Ногинск, г.Долгопрудный</p>
+                </li>
+              </ul>
+              <button class="popup__close" type="button" id="popupClose"></button>
+            </div>
+          </section>
+          <script type="text/javascript" src="table2excel.js"></script>
+          <script type="module" src="indexGos.js"></script>
+    </body>
+</html>

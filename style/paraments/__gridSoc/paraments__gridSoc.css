@@ -1,0 +1,5 @@
+.paraments__gridSoc {
+    grid-area: 1 / 1 / 2 / 2;
+    border: solid 2px rgb(223,240,250);
+    border-radius: 7px;
+  }
