@@ -32,8 +32,6 @@ export const kiSt = document.getElementById('kiSt')
 export const electronSt = document.getElementById('electronSt')
 export const noRefSt = document.getElementById('noRefSt')
 export const noStrahovkaSt = document.getElementById('noStrahovkaSt')
-// новое добавил !!!
-export const procentGarantST = document.getElementById('procentGarantST') 
 export const program = document.getElementById('resultProgram')
 export const infoVklad = document.getElementById('infoVklad')
 

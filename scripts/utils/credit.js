@@ -53,7 +53,6 @@ export const creditProducts = [
         procentMainFive: 0.1895, //процент за пеиод 49-60 месяцев
         procentMainSix: 0.1995, //процент за пеиод 61-84 месяцев
         procentMainSeven: 0.2045, //процент за пеиод 85-120 месяцев
-        procentGarantST: 1, // снижение процента за поручителя <!--!!!  Новое добавил !!!-->
     },
     {
         categories: 'Работающие клиенты', //категория

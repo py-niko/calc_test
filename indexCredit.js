@@ -1,6 +1,6 @@
 import { initialCredit, creditProducts } from "./scripts/utils/credit.js";
 import {firstOne, dopCredit, twoSecond, threeSecond, sumCredit, costHouse, btn, timeCredit, addSubmitStrahovka, deleteSubmitStrahovka, noStrahovkaSt, program,
-resultStavka, resultProduct, resultProgramma, monthPayment, pereplata, btnExcel, procentGarantST} from "./scripts/utils/constant.js"
+resultStavka, resultProduct, resultProgramma, monthPayment, pereplata, btnExcel} from "./scripts/utils/constant.js"
 import { parserNumberToRazryd } from './scripts/utils/parserNumberToRazryd.js'
 import { fillTable } from "./scripts/utils/fillTable.js";
 import { resetPaymentCredit } from "./scripts/utils/resetPayment.js";
